@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  todo:
+    image: "todo:release-1"
+    container_name: todo
+    ports:
+      - 8000:8000
+  webapp:
+    image: "todo-webapp:release-1"
+    container_name: webapp
+    stdin_open: true
+    ports:
+      - 3000:3000
